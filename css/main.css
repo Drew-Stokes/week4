@@ -1,0 +1,55 @@
+/* Main.css styles for Oriental Travels*/
+
+p#start {
+    position: fixed;
+    z-index: 25;   
+    color:white;
+    background-color: #660099;    
+    font-size: 1.5em;
+    margin-left: 5px;
+}
+p#start:hover{
+     background-color: #888888;    
+}
+header {
+    background-color: #660099;
+    font-family: 'Viner Hand', serif;
+    font-size: 1.5em;
+    color: white;
+}
+
+.main-purple {
+    background-color: #660099!important;
+    color: #fff!important;
+}
+h1{
+    font-family: 'Bernard MT';
+    font-size: 3em;
+}
+.main-hover-green:hover{
+    background-color: #14cc5e!important;
+    color: #fff!important;
+}
+
+.title{
+    color:crimson;
+    font-size: larger;    
+    text-shadow: 1px 1px 2px #444;
+}
+a{
+    text-decoration: none;
+}
+
+.cruises img {
+    width: 40%;
+    
+}
+
+.cruises img p{
+    display: inline;
+}
+
+.cruises p{
+    width: 40%;
+    float: right;
+}

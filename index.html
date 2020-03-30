@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Andrew Stokes - Eastern Travel</title>
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/main.css">
+    <Link href="http://fonts.googleeapis.com/css?family=Quando" rel="style sheet">
+    
+ <script>
+        function w3_open() {
+            document.getElementById("start").style.display = 'none';
+            document.getElementById("main").style.marginLeft = "25%";
+            document.getElementById("mySidebar").style.width = "25%";
+            document.getElementById("mySidebar").style.display = "block";
+
+        }
+
+        function w3_close() {
+            document.getElementById("start").style.display = 'block';
+            document.getElementById("main").style.marginLeft = "0%";
+            document.getElementById("mySidebar").style.display = "none";
+
+        }
+
+        function openRiver(evt, riverName) {
+            var i, x, tablinks;
+            x = document.getElementsByClassName("river");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("rivertablink");
+            for (i = 0; i < x.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" main-purple", "");
+            }
+            document.getElementById(riverName).style.display = "block";
+            evt.currentTarget.className += " main-purple";
+        }
+
+        function openDestination(evt, destinationName) {
+            var i, x, tablinks;
+            x = document.getElementsByClassName("destination");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("destinationtablink");
+            for (i = 0; i < x.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" main-purple", "");
+            }
+            document.getElementById(destinationName).style.display = "block";
+            evt.currentTarget.className += " main-purple";
+        }
+
+    </script>
+</head>
+<body>
+    
+        <!-- Header container -->
+        <!--******************-->
+        <body>
+
+            
+            <nav class="w3-sidebar w3-bar-block  w3-animate-left w3-center main-purple" style="display:none" id="mySidebar">
+                <h5 class="w3-xlarge">Menu</h5>
+                <button class="w3-bar-item w3-button w3-border-bottom w3-hover-black" onclick="w3_close()">Close </button>
+                <a href="#main" class="w3-bar-item w3-button w3-border-bottom main-hover-green">Home</a>
+                <a href="#cruises" class="w3-bar-item w3-button w3-border-bottom main-hover-green">Cruises</a>
+                <a href="#destinations" class="w3-bar-item w3-button w3-border-bottom main-hover-green">Destinations</a>
+                <button class="w3-bar-item w3-button w3-border-bottom main-hover-green" onclick="document.getElementById('signup_form').style.display='block'">Sign Up</button>
+            </nav>
+        
+            
+            <div id="main">
+                <p id="start" onclick="w3_open()" class="w3-xlarge w3-btn ">&#9776;</p>
+                <!-- &#9776; is the html code for the ≡ symbol  -->
+        <header class="w3-center  w3-container w3-padding">
+            <img alt="ship logo and title" src="img/logo.png" class="w3-image" style="width=100%">
+        </header>
+        
+        <div id="main-offers" class="w3-container w3-cell-row w3-margin-top w3-margin-bottom w3-center">
+         <!-- Container for Cruises part of banner -->
+         <div class="w3-cell w3-mobile w3-border">
+            <h1>Cruises</h1>
+           <img class="w3-center w3-image" src="img/ship_purple.png" alt="ship icon">
+            <!-- Actual copy -->
+            <div class="w3-margin cruises" >The <span class="title">Eastern Travel Express Line</span> offers a series of ships built specifically to travel the rivers of Southeast Asia in a style that is consistent with colonial times and traditions. The ships are small, having three decks and accommodating 65 passengers in 200 sq. ft. staterooms.
+            </div>
+            <div class="w3-margin cruises" >Staterooms are equiped with A/C, private bathrooms with shower and hair dryers.</div>
+            <div class="w3-btn w3-round-large">
+                <a href="#cruises">
+                    <h4>Learn more...</h4>
+                </a>
+            </div>
+        </div>
+
+         <!-- Container for Destinations part of banner -->
+         <div class="w3-cell w3-mobile w3-border">
+            <h1>Destinations</h1>
+            <img class="w3-center w3-image" src="img/resort_purple.png" alt="resort icon">
+            <!-- Actual copy -->
+            <div class="w3-margin cruises" >The <span class="title">Eastern Travel Hotel Group</span> offers high-quality luxury hotel spaces in many East Asian destinations of interest. From Hong Kong Bay to the Con Dao Island Archipelago, you will find the highest quality and the most amenities when you book with us.
+            </div>
+            <div class="w3-margin cruises" >All rooms are exquisitely tailored to the most discerning demands of the high-class traveler.</div>
+            <div class="w3-btn w3-round-large">
+                <a href="#resorts">
+                    <h4>Learn more...</h4>
+                </a>
+            </div>
+        </div>
+        </div>
+       
+        <div id="cruises" class="w3-container">
+            <h1 class="main-purple w3-padding w3-round-large">Cruises</h1>
+            <!-- Navigation buttons for three cruises using tabbed panels -->
+            <div class="w3-bar w3-sand w3-card">
+                <button class="w3-bar-item w3-button main-purple rivertablink" onclick="openRiver(event,'mekong')">Mekong</button>
+                <button class="w3-bar-item w3-button rivertablink" onclick="openRiver(event,'yangtze')">Yangtze</button>
+                <button class="w3-bar-item w3-button rivertablink" onclick="openRiver(event,'yellow')">Yellow</button>
+            </div>
+              <!-- Cruise #1 -->
+              <div id="mekong" class="w3-container w3-border river w3-animate-left">
+                <h2 class="w3-margin-left">Mekong River</h2>
+                <div class="w3-container w3-mobile cruises" >
+                    <img src="img/mekong-river.jpg" alt="mekong-river" class= "img">
+                    <p>Ut at placerat urna, et euismod est. Proin augue erat, mollis non libero euismod, laoreet imperdiet purus. Quisque cursus vulputate sem, consectetur pretium odio euismod et. Curabitur in dolor justo. Aliquam pharetra porta tincidunt. Duis nunc ex, imperdiet id placerat at, placerat id tortor. Phasellus blandit tempus nunc quis cursus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer lobortis porttitor condimentum</p>
+                </div>
+                </div>
+            <!-- Cruise #2 -->
+            <div id="yangtze" class="w3-container w3-border river w3-animate-left">
+                <h2 class="w3-margin-left">Yangtze River</h2>
+                <div class="w3-container w3-mobile cruises" >
+                    <img src="img/Yangtze-river.jpg" alt="yangtze-river" class= "img">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse maximus nisl sit amet velit convallis bibendum. Proin porta tincidunt quam non placerat. Sed vel eros vel felis consectetur venenatis. Sed molestie elit id nisl hendrerit condimentum. Curabitur scelerisque urna urna, vitae ornare velit imperdiet ornare. Nam sodales, est et egestas aliquet, arcu velit blandit ligula, et mollis neque odio ac metus. Ut volutpat suscipit elit sit amet ornare. Aliquam nec eleifend nulla. Nunc sagittis leo ac orci pulvinar, non aliquam sem aliquam. Integer non vulputate sem. Curabitur laoreet leo libero, eget condimentum ligula pretium sed.</p>
+            </div>
+            </div>
+            <!-- Cruise #3 -->
+            <div id="yellow" class="w3-container w3-border river w3-animate-left">
+                <h2 class="w3-margin-left">Yellow River</h2>
+
+                <div class="w3-container w3-mobile cruises" >
+                    <img src="img/yellow-river.jpg" alt="yellow-river" class= "img">
+                    <p>Praesent sit amet diam urna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur quis metus eu tellus feugiat pulvinar ut sit amet purus. Duis mollis nibh id lectus scelerisque, et blandit lorem tempus. Morbi non venenatis arcu. Donec egestas a sem vel interdum. Maecenas nisi nisi, condimentum lobortis eleifend at, facilisis quis dui. Donec eu sollicitudin lectus, nec sodales augue. Cras rhoncus felis vitae libero vulputate, viverra tincidunt tortor gravida. Nullam luctus diam dolor, ut pretium purus sagittis vel. Maecenas iaculis dui velit, nec dapibus turpis vehicula non. Duis pellentesque tortor ipsum, vel mattis nisi eleifend sit amet. In quis turpis purus. Pellentesque ut purus rhoncus, sagittis quam vel, dignissim arcu.</p>
+            </div>
+            </div>
+        <div id="destination" class="w3-container">
+            <h1 class="main-purple w3-padding w3-round-large">Destinations</h1>
+            <!-- Navigation buttons for three cruises using tabbed panels -->
+            <div class="w3-bar w3-sand w3-card">
+                <button class="w3-bar-item w3-button destinationtablink" onclick="openDestination(event,'Hong Kong')">Hong Kong</button>
+                <button class="w3-bar-item w3-button destinationtablink" onclick="openDestination(event,'Archipelago')">Archipelago</button>
+            </div>
+              <!-- destination #1 -->
+              <div id="Hong Kong" class="w3-container w3-border destination w3-animate-left">
+                <h2 class="w3-margin-left">Hong Kong Bay</h2>
+                <div class="w3-container w3-mobile cruises" >
+
+                    <img src="img/hongkong.jpg" alt="hongkong" class= "img">
+                    <p>Ut at placerat urna, et euismod est. Proin augue erat, mollis non libero euismod, laoreet imperdiet purus. Quisque cursus vulputate sem, consectetur pretium odio euismod et. Curabitur in dolor justo. Aliquam pharetra porta tincidunt. Duis nunc ex, imperdiet id placerat at, placerat id tortor. Phasellus blandit tempus nunc quis cursus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer lobortis porttitor condimentum</p>
+                </div>
+                </div>
+            <!-- destination #2 -->
+            <div id="Archipelago" class="w3-container w3-border destination w3-animate-left">
+                <h2 class="w3-margin-left">Co Dao Island Archipelago</h2>
+                <div class="w3-container w3-mobile cruises" >
+                    <img src="img/archipeligo.jpg" alt="archipeligo" class= "img">
+                        
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse maximus nisl sit amet velit convallis bibendum. Proin porta tincidunt quam non placerat. Sed vel eros vel felis consectetur venenatis. Sed molestie elit id nisl hendrerit condimentum. Curabitur scelerisque urna urna, vitae ornare velit imperdiet ornare. Nam sodales, est et egestas aliquet, arcu velit blandit ligula, et mollis neque odio ac metus. Ut volutpat suscipit elit sit amet ornare. Aliquam nec eleifend nulla. Nunc sagittis leo ac orci pulvinar, non aliquam sem aliquam. Integer non vulputate sem. Curabitur laoreet leo libero, eget condimentum ligula pretium sed.</p>
+            </div>
+            </div>
+</body>
+</html>
